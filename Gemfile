@@ -43,6 +43,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'pry-byebug'
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

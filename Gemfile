@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors', require: 'rack/cors'
+gem 'devise_token_auth'
 
 # group :development, :test do
 #   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160920084742) do
     t.string   "nickname"
     t.string   "image"
     t.string   "email"
-    t.json     "tokens"
+    t.text     "tokens"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.index ["email"], name: "index_users_on_email", using: :btree

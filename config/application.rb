@@ -30,5 +30,12 @@ module CaCooper
       generate.routing_specs false
       generate.controller_specs false
     end
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :put, :delete, :post]
+      end
+    end
   end
 end

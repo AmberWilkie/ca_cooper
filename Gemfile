@@ -7,6 +7,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cors', require: 'rack/cors'
 gem 'devise_token_auth'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
  gem 'listen', '~> 3.0.5'
  gem 'spring'

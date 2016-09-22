@@ -4,9 +4,7 @@ class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsControlle
 
 
   protected
-  def validate_account_update_params
-    super
-    # devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :nickname) }
-    #devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :name, :nickname])
+  def account_update_params
+    params.require(:user).permit(:name, :nickname, :email, :password, :password_confirmation, :current_password)
   end
 end

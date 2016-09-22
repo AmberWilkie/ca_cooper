@@ -5,7 +5,7 @@ class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsControlle
 
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :nickname) }
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :name, :nickname) }
+    # devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :name, :nickname) }
+    devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :name, :nickname])
   end
 end

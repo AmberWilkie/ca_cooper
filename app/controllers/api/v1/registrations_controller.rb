@@ -1,6 +1,7 @@
 class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsController
   # before_action :account_update_params
   protect_from_forgery with: :null_session
+  skip_before_filter  :verify_authenticity_token
   # before_action :validate_account_update_params, only: :update
   # skip_before_action :verify_authenticity_token, only: :update
 

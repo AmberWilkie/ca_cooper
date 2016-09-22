@@ -1,5 +1,5 @@
 class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsController
-  prepend_before_action :validate_account_update_params
+  before_action :account_update_params
   protect_from_forgery with: :null_session
 
 

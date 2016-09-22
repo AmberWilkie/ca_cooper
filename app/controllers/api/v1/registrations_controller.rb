@@ -1,4 +1,4 @@
-class Api::V1::RegistrationsController < Devise::RegistrationsController
+class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsController
   before_action :account_update_params
   protect_from_forgery with: :null_session
 

@@ -1,5 +1,5 @@
 class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsController
-  prepend_before_action :configure_permitted_params
+  prepend_before_action :configure_permitted_parameters
 
 
   # protect_from_forgery with: :null_session

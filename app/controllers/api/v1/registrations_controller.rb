@@ -1,10 +1,10 @@
-class Api::V1::RegistrationsController < DeviseTokenAuth::RegistrationsController
+class Api::V1::RegistrationsController < Devise::RegistrationsController
   before_action :account_update_params
   protect_from_forgery with: :null_session
 
 
   protected
   def account_update_params
-    permit(:name, :nickname, :email, :password, :password_confirmation, :current_password)
+    params.permit(:name, :nickname, :email, :password, :password_confirmation, :current_password)
   end
 end
